@@ -1,8 +1,8 @@
 import sys
 from PyQt5.QtWidgets import *
-from PyQt5 import uic   # ui 파일을 사용하기 위한 모듈 import
+from PyQt5 import uic
 
-#UI파일 연결 코드
+
 UI_class = uic.loadUiType("pythongui.ui")[0]
 
 

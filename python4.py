@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import *
 from PyQt5 import uic
 
 
-UI_class = uic.loadUiType("pythongui2.ui")[0]
+UI_class = uic.loadUiType("pythongui3.ui")[0]
 
 
 class MyWindow(QMainWindow, UI_class) :
@@ -13,11 +13,15 @@ class MyWindow(QMainWindow, UI_class) :
 
         self.pushButton.clicked.connect(self.pushed)
         self.pushButton_2.clicked.connect(self.pushed2)
+        self.pushButton_3.clicked.connect(self.pushed3)
 
     def pushed(self):
-        self.label_2.setText("This is Python")
+        #self.windowTitle(self.textEdit.toPlainText())
+        self.label.setText(self.textEdit.toPlainText())
     def pushed2(self):
         sys.exit()
+    def pushed3(self):
+        self.label.setText(self.textEdit_2.toPlainText())
 
 app = QApplication(sys.argv)
 
